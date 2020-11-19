@@ -193,7 +193,7 @@ workbox.routing.registerRoute(
 
 workbox.routing.registerRoute(
   new RegExp('/article.html'),
-  workbox.strategies.staleWhileRevalidate()
+  workbox.strategies.cacheFirst()
 );
 
 
