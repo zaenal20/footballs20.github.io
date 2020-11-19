@@ -2,7 +2,7 @@
     "name": "Football ",
     "short_name": "Football",
     "description": "Football news",
-    "start_url": "/index.html",
+    "start_url": "./index.html",
     "display": "standalone",
     "background_color": "#556B2F",
     "theme_color": "#556B2F",
@@ -10,19 +10,19 @@
     "gcm_sender_id": "249794266165",
     "icons": [
         {
-            "src": "asset/cryptofun.png",
+            "src": "./asset/cryptofun.png",
             "sizes": "290x290",
             "type": "image/png"
         },
 
         {
-            "src": "asset/cryptofun512.png",
+            "src": "./asset/cryptofun512.png",
             "sizes": "512x512",
             "type": "image/png"
         },
 
         {
-            "src": "asset/cryptofun192.png",
+            "src": "./asset/cryptofun192.png",
             "sizes": "192x192",
             "type": "image/png"
         }
