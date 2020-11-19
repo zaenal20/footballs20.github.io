@@ -1,0 +1,352 @@
+html {
+	scroll-behavior: smooth;
+}
+
+.f-top {
+	position: fixed;
+	top: 0;
+	z-index: 999;
+}
+
+body {
+	padding-top: 50px;
+}
+
+.loader {
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader > img {
+    width: 200px;
+}
+
+.loader.hidden {
+    animation: fadeOut 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.thumb {
+    height: 100px;
+    border: 1px solid black;
+    margin: 10px;
+}
+
+
+nav p {
+	display: none;
+}
+
+
+
+.hero-home {
+	width: 100%;
+	display: block;
+/*	background-image: url(../asset/hero-home.jpg);
+*/	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 250px;
+	margin-top: 25px;
+}
+
+.iframe1 {
+	box-shadow: 0 0 3px 1px #aaa;
+	height: 480px;
+}
+
+.postingan {
+	padding: 10px;
+	margin-top: 20px;
+	background-color: white;
+	border: 1px solid #ddd;
+}
+
+.post {
+	background-color: white;
+	width: 100%;
+	height: 200px;
+	overflow: hidden;
+}
+
+
+.post img {
+	float: left;
+	width: 200px;
+	margin: 10px;
+}
+
+.post h3 {
+	margin: 0;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.show {
+	height: auto;
+	overflow: auto;
+}
+
+.brnd {
+	margin-top: 5px;
+}
+
+.hp {
+	display: none;
+}
+
+.nav-bottom {
+	display: none;
+}
+
+.masukan {
+	text-align: center;
+}
+
+.status {
+	text-align: center;
+	color: green;
+	width: 70%;
+	display: block;
+	margin: auto;
+	background-color: lightgreen;
+	border-radius: 3px;
+	margin-bottom: 10px;
+}
+
+.saran {
+	padding: 10px;
+	border: 1px solid #aaa;
+	width: 70%;
+	display: block;
+	margin: auto;
+}
+
+#pesan {
+	height: 100px;
+}
+
+#pesan:focus {
+	outline: none;
+}
+
+#kirim {
+	background-color: #556B2F;
+	width: 100px;
+	color: white;
+	text-align: center;
+	padding: 5px;
+	border: 1px solid #aaa;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+#kirim:hover {
+	background-color: blue;
+}
+
+footer {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 0;
+	background-color: #556B2F;
+	position: absolute;
+	width: 100%;
+	font-size: 12px;
+	margin-top: 50px;
+	z-index: -1;
+}
+
+
+footer a {
+	color: white;
+}
+
+
+.sosmed {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(32px, 1fr));
+	gap: 10px;
+	padding: 10px;
+	color: white;
+
+}
+
+
+.icon-sosmed {
+	display: block;
+	margin: auto;
+	text-align: center;
+	
+}
+
+
+.icon-sosmed:hover img{
+	transform: rotateZ(360deg);
+
+}
+
+
+.icon-sosmed img{
+	display: block;
+	margin: auto;
+	width: 32px;
+	transition: 0.5s;
+}
+
+.wht{
+	color: black;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.wht:hover {
+	text-decoration: underline;
+}
+
+
+.tentang {
+	color: white;
+	padding: 10px;
+	text-align: center;
+}
+
+.copyright {
+	color: white;
+	text-align: center;
+	padding: 10px;
+}
+
+.copyright ul li {
+	list-style: none;
+}
+
+footer a:hover {
+	text-decoration: underline;
+}
+
+@media (max-width: 780px) {
+	footer {
+		margin-bottom: 49px;
+	}
+
+	 .iframe1 {
+		height: 200px;
+	}
+
+	nav p {
+	    width: 100%;
+		position: absolute; 
+		bottom: 50px; 
+		color: #aaa;
+		text-align: center;
+		display: block;
+	}
+
+	.hp {
+		width: 250px;
+		display: block;
+		margin:20px;
+	}
+
+	.brnd {
+		margin-top: 0;
+	}
+
+	.saran {
+		width: 95%;
+	}
+
+	.nav-bottom {
+		width: 100%;
+		height: 50px;
+		position: fixed;
+		bottom: 0;
+		background-color: #556B2F;
+		display: grid;
+		grid-template-areas: 'menu1 menu2 menu3';
+		text-align: center;
+		color: white;
+		padding-top: 10px;
+		z-index: 100;
+	}
+
+	.nav-bottom img{
+		width: 20px;
+	}
+
+
+	.nav-bottom a {
+		color: white;
+		text-decoration: none;
+	}
+
+
+
+	.menu1 {
+		grid-area: menu1;
+	}
+
+	.menu2 {
+		grid-area: menu2;
+	}
+
+	.menu3 {
+		grid-area: menu3;
+	}
+
+
+
+	.menu1 p,.menu2 p,.menu3 p {
+		margin-top: -7px;
+	}
+
+
+	.postingan {
+		padding: 10px;
+		margin-top: 20px;
+		background-color: white;
+		border: 1px solid #ddd;
+	}
+
+	.post {
+		display: block;
+		margin: auto;
+		width: 100%;
+		height: auto;
+		overflow: auto;
+	}
+
+
+	.post img {
+		width: 100%;
+		display: block;
+		margin: auto;
+	}
+
+	.post h3 {
+		font-size: 25px;
+		font-weight: bold;
+	}
+
+
+}
+
+
+
+

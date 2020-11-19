@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="manifest" href="/manifest.json">
+  <link rel="shortcut icon" href="asset/short.png"> 
+  <link rel="apple-touch-icon" href="asset/apple.png">
+  <meta name="theme-color" content="#556B2F"/>
+  <meta charset="UTF-8"/>
+  <title>Football News</title>
+  <meta name="description" content="My first PWA"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/materialize.min.css">
+  <link rel="stylesheet" type="text/css" href="css/za.css">
+</head>
+<body>
+  <!-- Navigasi -->
+  <nav style="background-color: #556B2F;" class="f-top" role="navigation">
+    <div class="nav-wrapper container">
+      <a href="#" class="brand-logo" id="logo-container">
+      	Football
+      </a>
+      <a href="#" class="sidenav-trigger" data-target="nav-mobile">☰</a>
+      
+      <ul class="topnav right hide-on-med-and-down"></ul>
+      <ul class="sidenav" id="nav-mobile"></ul>
+    </div>
+  </nav>
+  
+  </div>
+  <div class="loader">
+    <img src="asset/load.gif" alt="Loading..." />
+  </div>
+  <script type="text/javascript">
+    window.addEventListener("load", function () {
+    const loader = document.querySelector(".loader");
+    loader.className += " hidden"; 
+    });
+  </script>
+  <div class="container" id="body-content"></div>
+  <br><br><br><br>
+  <hr width="70%">
+  <hr width="40%">
+  <hr width="10%">
+
+  <footer>
+    <section class="sosmed">
+      <div class="icon-sosmed">
+        <a href="https://www.instagram.com/zaenal_arifin20_01_2000/" target="blank"><img src="asset/insta.png">
+        <p>Instagram</p></a>
+      </div>
+      <div class="icon-sosmed">
+        <a href="https://www.facebook.com/jaenal.canakbdg" target="blank"><img src="asset/fb.png">
+        <p>Facebook</p></a>
+      </div>
+      <div class="icon-sosmed">
+        <a href="#"><img src="asset/twitter.png">
+        <p>Twitter</p></a>
+      </div>
+      <div class="icon-sosmed">
+        <a href="mailto:zaenalariffin04@gmail.com" target="blank"><img src="asset/gmail.png">
+        <p>E-Mail</p></a>
+      </div>
+    </section>
+
+  </footer>
+
+  <script src="js/api.js"></script>
+  <script src="js/materialize.min.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/register-sw.js"></script>
+  <script src="js/idb.js"></script>
+  <script src="js/db.js"></script>
+
+  <script type="text/javascript">
+  	document.addEventListener("DOMContentLoaded", function() {
+        getArticles();
+    });
+
+
+    if (('PushManager' in window)) {
+	    navigator.serviceWorker.getRegistration().then(function(registration) {
+	        registration.pushManager.subscribe({
+	            userVisibleOnly: true,
+	            applicationServerKey: urlBase64ToUint8Array(
+	            	"BCIVLh5SnkRLW1Waw5yc-f5vcClH-LBo79nWM9DHORYtNj9U0J7NdPEyfc9H-f3jlVeY9WXrHL552qfLqbbRWa4"
+	            	),
+	        }).then(function(subscribe) {
+	            console.log('Berhasil melakukan subscribe dengan endpoint: ', subscribe.endpoint);
+	            console.log('Berhasil melakukan subscribe dengan p256dh key: ', btoa(String.fromCharCode.apply(
+	                null, new Uint8Array(subscribe.getKey('p256dh')))));
+	            console.log('Berhasil melakukan subscribe dengan auth key: ', btoa(String.fromCharCode.apply(
+	                null, new Uint8Array(subscribe.getKey('auth')))));
+	        }).catch(function(e) {
+	            console.error('Tidak dapat melakukan subscribe ', e.message);
+	        });
+	    });
+	}
+
+	function urlBase64ToUint8Array(base64String) {
+    const padding = '='.repeat((4 - base64String.length % 4) % 4);
+    const base64 = (base64String + padding)
+        .replace(/-/g, '+')
+        .replace(/_/g, '/');
+    const rawData = window.atob(base64);
+    const outputArray = new Uint8Array(rawData.length);
+    for (let i = 0; i < rawData.length; ++i) {
+        outputArray[i] = rawData.charCodeAt(i);
+    }
+    return outputArray;
+	}
+
+  </script>
+</body>
+</html>
+
+
