@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="manifest" href="/manifest.json">
-    <link rel="shortcut icon" href="asset/short.png"> 
-    <link rel="apple-touch-icon" href="asset/apple.png">
+    <link rel="manifest" href="./manifest.json">
+    <link rel="shortcut icon" href="./asset/short.png"> 
+    <link rel="apple-touch-icon" href="./asset/apple.png">
     <meta name="theme-color" content="#556B2F"/>
     <meta charset="UTF-8"/>
     <title>Football News</title>
     <meta name="description" content="My first PWA"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/materialize.min.css">
+    <link rel="stylesheet" href="./css/materialize.min.css">
   </head>
   <body>
        <!-- Navigasi -->
@@ -77,7 +77,7 @@
       if ("serviceWorker" in navigator) {
         window.addEventListener("load", function() {
           navigator.serviceWorker
-            .register("/service-worker.js")
+            .register("./service-worker.js")
             .then(function() {
               console.log("Pendaftaran ServiceWorker berhasil");
             })
@@ -91,8 +91,8 @@
 
     </script>
 
-    <script src="js/idb.js"></script>
-    <script src="js/db.js"></script>
+    <script src="./js/idb.js"></script>
+    <script src="./js/db.js"></script>
     
   </body>
 </html>

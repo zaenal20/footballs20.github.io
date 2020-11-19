@@ -107,7 +107,7 @@
 
 
 
-
+git remote add origin https://github.com/zaenal20/football99.github.io.git
 
 
 
@@ -227,3 +227,4 @@ self.addEventListener('push', function(event) {
 
 
 
+git clone https://github.com/zaenal20/football9999.github.io
