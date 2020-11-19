@@ -107,10 +107,6 @@
 
 
 
-git remote add origin https://github.com/zaenal20/football99.github.io.git
-
-
-
 importScripts('https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js');
  
 if (workbox)
@@ -222,9 +218,3 @@ self.addEventListener('push', function(event) {
     self.registration.showNotification('Push Notification', options)
   );
 });
-
-
-
-
-
-git clone https://github.com/zaenal20/football9999.github.io
