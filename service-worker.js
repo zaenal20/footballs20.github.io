@@ -192,6 +192,13 @@ workbox.routing.registerRoute(
     }),
 );
 
+workbox.routing.registerRoute(
+  new RegExp('https://crests.football-data.org/'),
+  workbox.strategies.staleWhileRevalidate({
+    cacheName: 'api-images',
+  })
+);
+
 
 workbox.routing.registerRoute(
   new RegExp('/article.html'),
