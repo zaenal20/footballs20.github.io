@@ -154,7 +154,9 @@ workbox.precaching.precacheAndRoute([
     { url: "./asset/short.png", revision: '1' },
     { url: "./asset/t.png", revision: '1' },
     { url: "./asset/twitter.png", revision: '1' },
-]);
+], {
+  ignoreURLParametersMatching: [/.*/]
+});
 
 
 
